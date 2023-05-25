@@ -8,38 +8,92 @@
     <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
     <script>
       window.onload = () => {
-        const mobileMenuIcon = document.getElementById("mobile-menu-button")
+        const mobileMenuIcon = document.getElementById("mobile-menu-button");
+        const mobileSubMenu = document.getElementById("tickets-menu-item");
         mobileMenuIcon.addEventListener("click", () => {
           if (mobileMenuIcon.classList.contains("open")) {
-            mobileMenuIcon.classList.remove("open")
+            mobileMenuIcon.classList.remove("open");
           } else {
-            mobileMenuIcon.classList.add("open")
+            mobileMenuIcon.classList.add("open");
           }
-        })
-      }
+        });
+        mobileSubMenu.addEventListener("click", () => {
+          if (mobileSubMenu.classList.contains("open")) {
+            mobileSubMenu.classList.remove("open");
+          } else {
+            mobileSubMenu.classList.add("open");
+          }
+        });
+      };
     </script>
   </head>
   <body>
     <main>
       <header class="text-zinc-200">
-        <nav class="sticky top-0 flex bg-gradient-to-r from-rose-500 to-pink-500">
-          <div class="flex items-center p-2 gap-2">
-            <img src="./assets/images/logo-inverted.png" alt="logo" width="50">
-            <div class="font-bold text-2xl">
+        <nav
+          class="sticky top-0 flex bg-gradient-to-r from-rose-500 to-pink-500"
+        >
+          <div class="flex items-center gap-2 p-2">
+            <img
+              src="./assets/images/logo-inverted.png"
+              alt="logo"
+              width="50"
+            />
+            <div class="text-2xl font-bold">
               tw:<span class="text-sky-900">mf</span>
             </div>
           </div>
-          <div class="block md:hidden ml-auto pr-4 my-auto cursor-pointer">
+          <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
             <div id="mobile-menu-button" class="group peer">
-              <div class="bg-zinc-200 rounded-full w-8 h-1 group-open:rotate-45 group-open:translate-y-1 transition-all"></div>
-              <div class="bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:hidden"></div>
-              <div class="bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:-rotate-45 group-open:-translate-y-1 transition-all"></div>
+              <div
+                class="h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:translate-y-1 group-open:rotate-45"
+              ></div>
+              <div
+                class="mt-1 h-1 w-8 rounded-full bg-zinc-200 group-open:hidden"
+              ></div>
+              <div
+                class="mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:-translate-y-1 group-open:-rotate-45"
+              ></div>
             </div>
-            <div class="absolute top-[62px] left-0 w-full bg-gradient-to-r from-rose-500 to-pink-500 hidden peer-open:block">
-              Mobile Menu
+            <div
+              class="absolute top-[62px] left-0 hidden w-full bg-gradient-to-r from-rose-500 to-pink-500 peer-open:block"
+            >
+              <div
+                class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 transition-colors hover:bg-white/10 hover:text-zinc-200"
+              >
+                <span>Home</span>
+              </div>
+              <div
+                class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 transition-colors hover:bg-white/10 hover:text-zinc-200"
+              >
+                <span>Lineup</span>
+              </div>
+              <div
+                id="tickets-menu-item"
+                class="group relative h-full cursor-pointer text-pink-200 transition-colors hover:bg-white/10 hover:text-zinc-200"
+              >
+                <div class="p-4 text-center font-bold">Tickets</div>
+                <div class="hidden group-open:block">
+                  <div
+                    class="relative p-4 text-center text-pink-200 transition-colors ease-in-out hover:bg-white/10 hover:text-zinc-200"
+                  >
+                    <span>Single day ticket</span>
+                  </div>
+                  <div
+                    class="relative p-4 text-center text-pink-200 transition-colors ease-in-out hover:bg-white/10 hover:text-zinc-200"
+                  >
+                    <span>7 day ticket</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 transition-colors hover:bg-white/10 hover:text-zinc-200"
+              >
+                <span>Support</span>
+              </div>
             </div>
           </div>
-          <div class="flex-1 items-center justify-end hidden md:flex">
+          <div class="hidden flex-1 items-center justify-end md:flex">
             <div class="menu-item">
               <span>Home</span>
             </div>
@@ -48,11 +102,17 @@
             </div>
             <div class="menu-item group">
               <span>Tickets</span>
-              <div class="bg-pink-500 absolute top-full right-0 whitespace-nowrap rounded-b-md text-right hidden group-hover:block">
-                <div class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 ease-in-out cursor-pointer text-pink-200">
+              <div
+                class="absolute top-full right-0 hidden whitespace-nowrap rounded-b-md bg-pink-500 text-right group-hover:block"
+              >
+                <div
+                  class="cursor-pointer p-4 font-bold text-pink-200 ease-in-out hover:bg-white/5 hover:text-zinc-200"
+                >
                   <span>Single day ticket</span>
                 </div>
-                <div class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 ease-in-out cursor-pointer text-pink-200">
+                <div
+                  class="cursor-pointer p-4 font-bold text-pink-200 ease-in-out hover:bg-white/5 hover:text-zinc-200"
+                >
                   <span>7 day ticket</span>
                 </div>
               </div>

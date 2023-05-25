@@ -6,6 +6,18 @@
     <link href="../dist/output.css" rel="stylesheet" />
     <script defer src="./assets/fontawesome/js/solid.min.js"></script>
     <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+    <script>
+      window.onload = () => {
+        const mobileMenuIcon = document.getElementById("mobile-menu-button")
+        mobileMenuIcon.addEventListener("click", () => {
+          if (mobileMenuIcon.classList.contains("open")) {
+            mobileMenuIcon.classList.remove("open")
+          } else {
+            mobileMenuIcon.classList.add("open")
+          }
+        })
+      }
+    </script>
   </head>
   <body>
     <main>
@@ -17,7 +29,17 @@
               tw:<span class="text-sky-900">mf</span>
             </div>
           </div>
-          <div class="flex-1 flex items-center justify-end">
+          <div class="block md:hidden ml-auto pr-4 my-auto cursor-pointer">
+            <div id="mobile-menu-button" class="group peer">
+              <div class="bg-zinc-200 rounded-full w-8 h-1 group-open:rotate-45 group-open:translate-y-1 transition-all"></div>
+              <div class="bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:hidden"></div>
+              <div class="bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:-rotate-45 group-open:-translate-y-1 transition-all"></div>
+            </div>
+            <div class="absolute top-[62px] left-0 w-full bg-gradient-to-r from-rose-500 to-pink-500 hidden peer-open:block">
+              Mobile Menu
+            </div>
+          </div>
+          <div class="flex-1 items-center justify-end hidden md:flex">
             <div class="menu-item">
               <span>Home</span>
             </div>

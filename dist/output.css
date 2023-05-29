@@ -416,6 +416,42 @@ html {
   font-family: "Quicksand", sans-serif;
 }
 
+h1{
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h3{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+h4{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+h5{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+h6{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -668,6 +704,11 @@ html {
   margin-bottom: auto;
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .ml-auto{
   margin-left: auto;
 }
@@ -686,6 +727,10 @@ html {
 
 .mt-3{
   margin-top: 0.75rem;
+}
+
+.mt-20{
+  margin-top: 5rem;
 }
 
 .block{
@@ -750,6 +795,10 @@ html {
 
 .w-1{
   width: 0.25rem;
+}
+
+.max-w-screen-lg{
+  max-width: 1024px;
 }
 
 .flex-1{
@@ -1040,9 +1089,9 @@ html {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.animation-delay-200{
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
+.animation-delay-100{
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
 }
 
 .animation-delay-\[150\]{
@@ -1053,21 +1102,6 @@ html {
 .animation-delay-300{
   -webkit-animation-delay: 300ms;
           animation-delay: 300ms;
-}
-
-.animation-delay-\[75ms\]{
-  -webkit-animation-delay: 75ms;
-          animation-delay: 75ms;
-}
-
-.animation-delay-100{
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
-}
-
-.animation-delay-\[250ms\]{
-  -webkit-animation-delay: 250ms;
-          animation-delay: 250ms;
 }
 
 .animation-delay-\[50ms\]{

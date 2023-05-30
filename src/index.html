@@ -38,12 +38,28 @@
           const itemWidth = carousel.getElementsByTagName("div")[0].clientWidth;
           carousel.scrollLeft = carousel.scrollLeft - itemWidth;
         });
+
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        darkModeToggle.addEventListener("click", () => {
+          if (document.body.classList.contains("dark")) {
+            document.body.classList.remove("dark");
+          } else {
+            document.body.classList.add("dark");
+          }
+        });
       };
     </script>
   </head>
-  <body>
-    <main>
+  <body class="dark">
+    <main class="bg-zinc-200 dark:bg-zinc-900">
       <header class="text-zinc-200">
+        <div
+          id="dark-mode-toggle"
+          class="fixed top-24 right-0 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 p-2 text-3xl text-zinc-200 dark:bg-zinc-200 dark:text-zinc-900"
+        >
+          <i class="fa-solid fa-sun dark:hidden"></i>
+          <i class="fa-solid fa-moon hidden dark:inline"></i>
+        </div>
         <nav
           class="sticky top-0 z-10 flex bg-gradient-to-r from-rose-500 to-pink-500"
         >
@@ -189,7 +205,9 @@
           </form>
         </div>
       </header>
-      <div class="mx-auto mt-20 max-w-screen-lg">
+      <div
+        class="mx-auto mt-20 max-w-screen-lg text-zinc-900 dark:text-zinc-200"
+      >
         <h2>Headliners</h2>
         <p>
           Experience the sonic delight from these made-up artists across 7

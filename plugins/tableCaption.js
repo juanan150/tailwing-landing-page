@@ -1,14 +1,15 @@
-const plugin = require("tailwindcss/plugin")
+const plugin = require("tailwindcss/plugin");
 
-const tableCaption = plugin(({addUtilities})=> {
+const tableCaption = plugin(({ addUtilities }) => {
+  // Add static classes to be used
   addUtilities({
     ".caption-bottom": {
-      "caption-side": "bottom"
+      "caption-side": "bottom",
     },
     ".caption-top": {
-      "caption-side": "top"
-    }
-  })
-})
+      "caption-side": "top",
+    },
+  });
+});
 
-module.exports = tableCaption
+module.exports = tableCaption;
